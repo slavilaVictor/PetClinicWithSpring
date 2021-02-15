@@ -29,4 +29,12 @@ public class OwnerController {
         // Be careful here at the name, to match the name in my packages
         return "owners/index";
     }
+
+    @RequestMapping("/find")
+    public String findOwners(){
+
+        return "notimplemented";
+    }
+
+
 }

@@ -16,7 +16,7 @@ public class VetController {
     }
 
     // I could use only one path, but I chose multiple for my users
-    @RequestMapping({"/vets", "/vets/index", "/vets/index.html"})
+    @RequestMapping({"/vets", "/vets/index", "/vets/index.html","/vets.html"})
     public String listVets(Model model){
 
         model.addAttribute("vets",vetService.findAll());

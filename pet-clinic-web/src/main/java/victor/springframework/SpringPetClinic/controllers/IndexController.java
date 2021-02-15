@@ -14,4 +14,10 @@ public class IndexController {
         // Spring will look for a template named index. And I do have an index.html file
         return "index";
     }
+
+    @RequestMapping("/oups")
+    public String oupsHandler(){
+
+        return "notimplemented";
+    }
 }
