@@ -52,6 +52,7 @@ public class OwnerSDJpaService implements OwnerService {
 
     @Override
     public Owner save(Owner object) {
+        // If I want to verify myself on which profile I'm running, I can do some printings here
         return ownerRepository.save(object);
     }
 
