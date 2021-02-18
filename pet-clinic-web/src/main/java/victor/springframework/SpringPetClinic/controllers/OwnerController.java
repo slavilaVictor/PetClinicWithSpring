@@ -2,7 +2,12 @@ package victor.springframework.SpringPetClinic.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import victor.springframework.SpringPetClinic.model.Owner;
+import victor.springframework.SpringPetClinic.model.Pet;
 import victor.springframework.SpringPetClinic.services.OwnerService;
 
 // Another way to do the mapping here, because all the requests start with "/owners"
@@ -34,6 +39,14 @@ public class OwnerController {
     public String findOwners(){
 
         return "notimplemented";
+    }
+
+    // Another way -> I do not return a String, I return a ModelAndView object
+    @GetMapping("/{ownerId}")
+    public ModelAndView showOwner(@PathVariable("ownerId") Long ownerId) {
+        ModelAndView mav = new ModelAndView("owners/ownerDetails");
+        mav.addObject(ownerService.findById(ownerId));
+        return mav;
     }
 
 
