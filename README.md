@@ -1,2 +1,2 @@
 # PetClinicWithSpring
-Sprint Pet Clinic Project
+Spring Pet Clinic Project
